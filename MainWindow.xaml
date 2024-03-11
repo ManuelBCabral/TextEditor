@@ -1,0 +1,26 @@
+﻿<Window x:Class="ManuelBelausteguiAssignmentM8.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Title="Text Editor" Height="350" Width="525" MinWidth="525" MinHeight="250">
+    <DockPanel Height="Auto" Width="Auto" x:Name="dockPanel1" LastChildFill="True">
+        <Menu Height="23" x:Name="menu1" Width="Auto" DockPanel.Dock="Top">
+            <!-- File Menu -->
+            <MenuItem Header="File">
+                <MenuItem Header="New" x:Name="new_menuItem" Click="new_menuItem_Click" />
+                <MenuItem Header="Open" x:Name="open_menuItem" Click="open_menuItem_Click"/>
+                <MenuItem Header="Save" IsEnabled="False" x:Name="save_menuItem" Click="save_menuItem_Click" />
+                <MenuItem Header="SaveAs" IsEnabled="False" x:Name="saveas_menuItem" Click="saveas_menuItem_Click" />
+
+                <Separator/>
+                <MenuItem Header="Exit" x:Name="exit_menuItem" Click="exit_menuItem_Click" />
+            </MenuItem>
+            <!-- Help Menu -->
+            <MenuItem Header="Help">
+                <MenuItem Header="About" x:Name="about_menuItem" Click="about_menuItem_Click" />
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <TextBox x:Name="Text_textBox" AcceptsReturn="true" AcceptsTab="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Margin="10,30,10,10" TextChanged="TextBox_TextChanged" >Start new document or load a .txt document to start</TextBox>
+        </Grid>
+    </DockPanel>
+</Window>
